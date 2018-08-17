@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="context1" defaultModelType="flat">
+  	<commentGenerator>
+  		<property name="suppressAllComments" value="true"/>
+  	</commentGenerator>
+    <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/test" 
+				    driverClass="com.mysql.jdbc.Driver" 
+				    password="root" 
+				    userId="root" />
+	<!-- 实体类 -->
+    <javaModelGenerator targetPackage="com.model" targetProject="springboot-learning/src/main/java" />
+    <!-- mapper.xml -->
+    <sqlMapGenerator targetPackage="mapper" targetProject="springboot-learning/src/main/resources" />
+    <!-- mapper接口 -->
+    <javaClientGenerator targetPackage="com.mapper" targetProject="springboot-learning/src/main/java" type="XMLMAPPER" >
+    </javaClientGenerator>
+    <table tableName="admin" domainObjectName="Admin" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false" >
+    	<property name="useActualColumnNames" value="true"/>
+	</table>
+  </context>
+</generatorConfiguration>
