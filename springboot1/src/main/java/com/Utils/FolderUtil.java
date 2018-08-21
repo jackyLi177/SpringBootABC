@@ -8,6 +8,8 @@ import java.io.File;
  */
 public class FolderUtil {
 
+    public static int count=3;
+
     public static void main(String[] args){
 //        String demo = "E:\\信号优化\\upload\\ohters\\2018\\08\\08\\1062\\20180808_114226/id=54943763.png";
 //        File file = new File(demo);
@@ -19,14 +21,9 @@ public class FolderUtil {
 //        System.out.println(file.getParent());
 
         String url = "E:\\信号优化\\upload";
+        Integer num = new Integer(3);
         File file = new File(url);
-        Integer levle = 3;
-        getFile(url,3);
-        for (int i=1;i<=5;i++){
-            delEmptyFolder(url);
-        }
-        System.out.println("================================================================");
-        getFile(url,3);
+        getFile(url,num);
     }
 
     /**
@@ -36,13 +33,14 @@ public class FolderUtil {
      * @return
      */
     public static void getFile(String url,Integer level){
-        level = level + 1;
         File files = new File(url);
         File[] list = files.listFiles();
         for(File f : list){
-            System.out.println(f.getAbsolutePath()+"              level:" + level);
             if(f.isDirectory()){
-                getFile(f.getAbsolutePath(),level);
+                level += 1;      //进入目录遍历，层级加1
+                System.out.println(f.getAbsolutePath()+"              level:" + level);
+                getFile(f.getAbsolutePath(),level);    ////递归调用遍历目录的方法
+                level -= 1;     //当前文件夹遍历完成，退回到上一级，继续遍历下一个文件夹
             }
         }
     }
