@@ -2,7 +2,6 @@ package com.Utils;
 
 import cn.afterturn.easypoi.excel.ExcelExportUtil;
 import cn.afterturn.easypoi.excel.entity.ExportParams;
-import com.fundway.wxlogin.api.model.User;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.usermodel.Workbook;
 
@@ -13,7 +12,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.reflect.Field;
 import java.net.URLEncoder;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -135,11 +133,11 @@ public class ExcelUtils {
         }
     }
 
-    public static void main(String[] args){
-        List<User> list = new ArrayList<>();
-        User user = new User();
-        user.setPhone("122333333").setUsername("jacky").setToken("1351613asf5dsda5fsfgdgfdgafgsdfgfdvcxzvddfgregfbfvadfgafdagragfvafadsfsadvasdgaefadf").setIsVail("8");
-        list.add(user);
-        exportExcel(User.class,list);
-    }
+//    public static void main(String[] args){
+//        List<User> list = new ArrayList<>();
+//        User user = new User();
+//        user.setPhone("122333333").setUsername("jacky").setToken("1351613asf5dsda5fsfgdgfdgafgsdfgfdvcxzvddfgregfbfvadfgafdagragfvafadsfsadvasdgaefadf").setIsVail("8");
+//        list.add(user);
+//        exportExcel(User.class,list);
+//    }
 }
