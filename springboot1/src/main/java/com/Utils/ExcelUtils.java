@@ -2,6 +2,7 @@ package com.Utils;
 
 import cn.afterturn.easypoi.excel.ExcelExportUtil;
 import cn.afterturn.easypoi.excel.entity.ExportParams;
+import com.fundway.wxlogin.api.model.User;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.usermodel.Workbook;
 
@@ -12,17 +13,11 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.reflect.Field;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 /**
- * Excel导出工具
- * <dependency>
- *    <groupId>cn.afterturn</groupId>
- *    <artifactId>easypoi-base</artifactId>
- *    <version>3.0.3</version>
- * </dependency>
- * @author liyongjie
  * @date 18-5-23上午9:29
  */
 public class ExcelUtils {
@@ -92,6 +87,7 @@ public class ExcelUtils {
         }
         //headers表示excel表中第一行的表头
         String[] headers = sb.toString().split(",");
+
         String fileName = "信号路口详情列表"  + ".xls";
         //新增数据行，并且设置单元格数据
         int rowNum = 1;
@@ -111,7 +107,6 @@ public class ExcelUtils {
                 HSSFRow row1 = sheet.createRow(rowNum);
                 for(int n=0;n<headers.length;n++){
                     Field field = pojoClass.getDeclaredField(headers[n]);
-
                     field.setAccessible(true);
                     Object o = field.get(entity);
                     row1.createCell(n).setCellValue(o.toString());
@@ -123,9 +118,15 @@ public class ExcelUtils {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
+
+        //自动调整列宽,这个必须在最后设置，否则可能无效
+        for(int n=0;n<headers.length;n++){
+            sheet.autoSizeColumn(n);
+        }
+
         FileOutputStream fos = null;
         try {
-            fos = new FileOutputStream(fileName);
+            fos = new FileOutputStream("e:\\"+fileName);
             workbook.write(fos);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -134,11 +135,11 @@ public class ExcelUtils {
         }
     }
 
-//    public static void main(String[] args){
-//        List<User> list = new ArrayList<>();
-//        User user = new User();
-//        user.setPhone("122333333").setUsername("jacky").setToken("1351613asf5dsda5fs").setIsVail("8");
-//        list.add(user);
-//        exportExcel(User.class,list);
-//    }
+    public static void main(String[] args){
+        List<User> list = new ArrayList<>();
+        User user = new User();
+        user.setPhone("122333333").setUsername("jacky").setToken("1351613asf5dsda5fsfgdgfdgafgsdfgfdvcxzvddfgregfbfvadfgafdagragfvafadsfsadvasdgaefadf").setIsVail("8");
+        list.add(user);
+        exportExcel(User.class,list);
+    }
 }
