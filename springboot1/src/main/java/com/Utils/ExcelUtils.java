@@ -16,6 +16,13 @@ import java.util.Collection;
 import java.util.List;
 
 /**
+ * Excel导出工具
+ * <dependency>
+ *    <groupId>cn.afterturn</groupId>
+ *    <artifactId>easypoi-base</artifactId>
+ *    <version>3.0.3</version>
+ * </dependency>
+ * @author liyongjie
  * @date 18-5-23上午9:29
  */
 public class ExcelUtils {
