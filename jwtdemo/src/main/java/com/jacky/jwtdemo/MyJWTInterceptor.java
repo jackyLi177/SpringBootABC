@@ -1,7 +1,6 @@
 package com.jacky.jwtdemo;
 
 import com.auth0.jwt.JWT;
-import com.auth0.jwt.impl.JWTParser;
 import com.jacky.jwtdemo.bean.MyToken;
 import com.jacky.jwtdemo.dao.TokenDao;
 import org.springframework.beans.factory.BeanFactory;
