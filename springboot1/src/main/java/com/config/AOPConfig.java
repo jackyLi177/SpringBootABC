@@ -62,15 +62,18 @@ public class AOPConfig {
 //	}
 //	
 //	/**
-//	 * 环绕切点执行，如果写了@Around，就必须写完整（proceed方法必须写出来），否则进入不了@before，@around执行于@Before之前
+//	 * 环绕切点执行，
+//     如果写了@Around，就必须写完整（proceed方法必须写出来），否则进入不了@before，@around执行于@Before之前
+//     必须返回proceed()的结果，否则结果不能返回
 //	 * @param pjp
 //	 * @throws Throwable
 //	 */
 //	@Around(value = "aopDemo()")
-//	public void doAround(ProceedingJoinPoint pjp) throws Throwable{
+//	public Object doAround(ProceedingJoinPoint pjp) throws Throwable{
 //		log.info("doAroundBefore-----------------------------<");
-//		pjp.proceed();
+//		Object result = pjp.proceed();
 //		log.info("doAroundAfter-----------------------------<");
+//        return result;
 //	}
 //	
 //	@AfterReturning(returning="ret",pointcut="aopDemo()")
