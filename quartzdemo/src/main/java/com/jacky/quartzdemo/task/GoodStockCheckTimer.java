@@ -18,6 +18,6 @@ public class GoodStockCheckTimer extends QuartzJobBean {
 
     @Override
     protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-        logger.info("库存检查执行---------------------》:{}"+new Date());
+        logger.info("22222库存检查执行---------------------》 "+new Date());
     }
 }

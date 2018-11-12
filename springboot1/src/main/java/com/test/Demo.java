@@ -1,7 +1,16 @@
 package com.test;
 
 
+import java.lang.reflect.ParameterizedType;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Pattern;
+import net.sourceforge.pinyin4j.PinyinHelper;
+import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
+import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
+import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
+import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
 /**
  * @Author : liyongjie
@@ -9,10 +18,35 @@ import java.util.regex.Pattern;
  */
 public class Demo {
 
-    public static void main(String[] args){
+    public <T> void sss(T t){
+        String name = t.getClass().getName();
+        System.out.println(name);
+    }
 
-        String s = "11,31,104,203,204,304,403,404;";
-        System.out.println(s.matches("[0-8,;]+"));
+    public static void main(String[] args){
+        StringBuffer pybf = new StringBuffer();
+        HanyuPinyinOutputFormat defaultFormat = new HanyuPinyinOutputFormat();
+        defaultFormat.setCaseType(HanyuPinyinCaseType.UPPERCASE);   //大小写
+        defaultFormat.setToneType(HanyuPinyinToneType.WITHOUT_TONE);   //带不带音标
+        String str = "领拉开c纪cc念馆";
+        char[] chars = str.toCharArray();
+        for (char c : chars){
+            if (c > 128) {
+                try {
+                    String[] temp = PinyinHelper.toHanyuPinyinStringArray(c, defaultFormat);
+                    Arrays.stream(temp).forEach(System.out::println);
+                    if (temp != null) {
+                        pybf.append(temp[0].charAt(0));
+                    }
+                } catch (BadHanyuPinyinOutputFormatCombination e) {
+                    e.printStackTrace();
+                }
+            } else {
+                pybf.append(c);
+            }
+        }
+
+        System.out.println(pybf.toString());
     }
 
 }
