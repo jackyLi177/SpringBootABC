@@ -58,6 +58,9 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
+            <!--<version>1.0.25</version>-->
+            <!--　提高版本，加强对sql的解析，兼容postgres语法-->
+            <version>1.1.6</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
