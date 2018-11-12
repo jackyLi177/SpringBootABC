@@ -1,5 +1,6 @@
 package com.jacky.quartzdemo;
 
+import jdk.management.resource.internal.inst.SocketOutputStreamRMHooks;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -52,5 +53,10 @@ public class QuartzdemoApplicationTests {
                 .andReturn();
         result.getResponse().setCharacterEncoding("UTF-8");
         System.out.println(result.getResponse().getContentAsString());
+    }
+
+    @Test
+    public void a(){
+        System.out.println(17%3);
     }
 }
