@@ -12,6 +12,18 @@ import org.springframework.web.multipart.MultipartException;
 
 import com.common.Result;
 
+/**
+ * 全局异常统一处理
+ *
+ * 失效常见问题：
+ * 1.确保注解@RestControllerAdvice/@ControllerAdvice的类被spring容器管理到。
+ *     ①spring boot Java配置检查@SpringBootApplication(scanBasePackages = )（scanBasePackages 配置的包是否包含这个类默认情况下spring boot项目扫描的是@SpringBootApplication注解所在类的包及子包）
+ *     ② xml配置的spring 普通项目检查<context:component-scan base-package="com.test"/>
+ *
+ * 2.检查项目中所有的切面编程，是否在某个切面将异常try-catch然后没有扔出来。常见的就是切面的环绕处理，捕获了异常忘记抛出来。
+ *
+ * 3.检查项目中是否有其他的相同的全局异常处理类，例如BaseController中是否已经定义了
+ */
 @RestControllerAdvice
 public class ExceptionController {
 
