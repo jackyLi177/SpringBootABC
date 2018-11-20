@@ -6,6 +6,7 @@ import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -21,6 +22,10 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class UserRegisterQueueConfiguration {
+
+    @Autowired
+    private Queue userRegisterQueue;
+
     /**
      * 配置路由交换对象实例
      * @return
@@ -49,6 +54,9 @@ public class UserRegisterQueueConfiguration {
     @Bean
     public Binding userRegisterBinding()
     {
-        return BindingBuilder.bind(userRegisterQueue()).to(userRegisterDirectExchange()).with(QueueEnum.USER_REGISTER.getRoutingKey());
+        return BindingBuilder
+                .bind(userRegisterQueue)   //绑定消息队列
+                .to(userRegisterDirectExchange())  //绑定交换路由
+                .with(QueueEnum.USER_REGISTER.getRoutingKey());  //指定路由键
     }
 }

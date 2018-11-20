@@ -6,6 +6,9 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 
 /**
  * 消息队列业务
+ * RabbitTemplate.ConfirmCallback接口是用来回调消息发送成功后的方法，
+ * 当一个消息被成功写入到RabbitMQ服务端时，
+ * 就会自动的回调RabbitTemplate.ConfirmCallback接口内的confirm方法完成通知
  * ========================
  *
  * @author 恒宇少年
