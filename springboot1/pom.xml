@@ -176,6 +176,12 @@
             <version>1.4</version>
         </dependency>
 
+        <dependency>
+            <groupId>net.sourceforge</groupId>
+            <artifactId>pinyin4j</artifactId>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/pinyin4j-2.5.0.jar</systemPath>
+        </dependency>
 
     </dependencies>
 
