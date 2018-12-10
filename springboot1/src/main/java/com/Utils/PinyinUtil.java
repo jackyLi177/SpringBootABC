@@ -66,4 +66,9 @@ public class PinyinUtil {
         return pybf.toString();
     }
 
+    public static void main(String[] args){
+        String s = "杀了房间里撒";
+        System.out.println(PinyinUtil.getFullSpell(s));
+    }
+
 }
