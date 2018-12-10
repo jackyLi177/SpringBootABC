@@ -65,11 +65,11 @@ INSERT INTO dept values (40, '财务部', '武汉');
  INSERT INTO emp VALUES (1015, '张三', '保洁员', 1009, '2001-09-01', 24500, 50000, 50);
 
   /插入salgrade表数据/
- INSERT INTO salgrade values (1, 7000, 12000);
- INSERT INTO salgrade values (2, 120, 14000);
- INSERT INTO salgrade values (3, 140, 20000);
- INSERT INTO salgrade values (4, 200, 30000);
- INSERT INTO salgrade values (5, 300, 99990);
+INSERT INTO salgrade VALUES (1, 7000, 12000);
+INSERT INTO salgrade VALUES (2, 12010, 14000);
+INSERT INTO salgrade VALUES (3, 14010, 20000);
+INSERT INTO salgrade VALUES (4, 20010, 30000);
+INSERT INTO salgrade VALUES (5, 30010, 99990);
  
   /插入stu表数据/
  insert into stu values ('1', '王永', '23', '男', '北京', '1500');
