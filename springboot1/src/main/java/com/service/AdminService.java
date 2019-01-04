@@ -60,4 +60,7 @@ public class AdminService {
 		Admin admin = mapper.getByName(name);
 		return admin !=null && PsdEncodes.validatePassword(password, admin.getPassword())?admin:null;
 	}
+
+	public static void main(String[] args){
+	}
 }
