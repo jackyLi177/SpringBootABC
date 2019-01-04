@@ -1,6 +1,6 @@
 /* 创建部门表 */
 CREATE TABLE `dept` (
-  `deptno` int() NOT NULL,
+  `deptno` int NOT NULL,
   `dname` varchar(50) DEFAULT NULL,
   `loc` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`deptno`)
@@ -8,14 +8,14 @@ CREATE TABLE `dept` (
 
 /* 创建雇员表 */
 CREATE TABLE `emp` (
-  `empno` int() NOT NULL,
+  `empno` int NOT NULL,
   `ename` varchar(50) DEFAULT NULL,
   `job` varchar(50) DEFAULT NULL,
-  `mgr` int() DEFAULT NULL,
+  `mgr` int DEFAULT NULL,
   `hiredate` date DEFAULT NULL,
   `sal` decimal(7,2) DEFAULT NULL,
   `COMM` decimal(7,2) DEFAULT NULL,
-  `deptno` int() DEFAULT NULL,
+  `deptno` int DEFAULT NULL,
   PRIMARY KEY (`empno`),
   KEY `fk_emp` (`mgr`),
   CONSTRAINT `fk_emp` FOREIGN KEY (`mgr`) REFERENCES `emp` (`empno`)
@@ -23,31 +23,31 @@ CREATE TABLE `emp` (
 
 /* 创建工资等级表 */
 CREATE TABLE `salgrade` (
-  `grade` int() NOT NULL,
-  `losal` int() DEFAULT NULL,
-  `hisal` int() DEFAULT NULL,
+  `grade` int NOT NULL,
+  `losal` int DEFAULT NULL,
+  `hisal` int DEFAULT NULL,
   PRIMARY KEY (`grade`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /* 创建学生表 */
 CREATE TABLE `stu` (
-  `sid` int() NOT NULL,
+  `sid` int NOT NULL,
   `sname` varchar(50) DEFAULT NULL,
-  `age` int() DEFAULT NULL,
+  `age` int DEFAULT NULL,
   `gander` varchar(10) DEFAULT NULL,
   `province` varchar(50) DEFAULT NULL,
-  `tuition` int() DEFAULT NULL,
+  `tuition` int DEFAULT NULL,
   PRIMARY KEY (`sid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-/插入dept表数据/
+/*插入dept表数据*/
 INSERT INTO dept values (10, '教研部', '北京');
 INSERT INTO dept values (20, '学工部', '上海');
 INSERT INTO dept values (30, '销售部', '广州');
 INSERT INTO dept values (40, '财务部', '武汉');
 
-/插入emp表数据/
+/*插入emp表数据*/
  INSERT INTO emp VALUES (1009, '曾阿牛', '董事长', NULL, '2001-11-17', 50000, NULL, 10);
  INSERT INTO emp VALUES (1004, '刘备', '经理', 1009, '2001-04-02', 29750, NULL, 20);
  INSERT INTO emp VALUES (1006, '关羽', '经理', 1009, '2001-05-01', 28500, NULL, 30);
@@ -64,14 +64,14 @@ INSERT INTO dept values (40, '财务部', '武汉');
  INSERT INTO emp VALUES (1001, '甘宁', '文员', 1013, '2000-12-17', 8000, NULL, 20);
  INSERT INTO emp VALUES (1015, '张三', '保洁员', 1009, '2001-09-01', 24500, 50000, 50);
 
-  /插入salgrade表数据/
+  /*插入salgrade表数据*/
 INSERT INTO salgrade VALUES (1, 7000, 12000);
 INSERT INTO salgrade VALUES (2, 12010, 14000);
 INSERT INTO salgrade VALUES (3, 14010, 20000);
 INSERT INTO salgrade VALUES (4, 20010, 30000);
 INSERT INTO salgrade VALUES (5, 30010, 99990);
  
-  /插入stu表数据/
+  /*插入stu表数据*/
  insert into stu values ('1', '王永', '23', '男', '北京', '1500');
  insert into stu values ('2', '张雷', '25', '男', '辽宁', '2500');
  insert into stu values ('3', '李强', '22', '男', '北京', '3500');
@@ -127,3 +127,61 @@ INSERT INTO salgrade VALUES (5, 30010, 99990);
  insert into stu values ('53', '艾林', '23', '女', '广州', '2500');
  insert into stu values ('54', '郭林', '18', '男', '山西', '3500');
  insert into stu values ('55', '周制强', '23', '男', '湖北', '4500');
+
+
+
+
+########################################################################################################
+create table class(
+  cid int not null auto_increment primary key,
+  caption varchar(32)
+);
+
+create table student(
+  sid int not null auto_increment primary key,
+  sname varchar(32) not null,
+  gender varchar(8) not null,
+  class_id int not null
+);
+
+create table teacher(
+  tid int not null auto_increment primary key,
+  tname varchar(32) not null
+);
+
+create table course(
+  cid int not null auto_increment primary key,
+  cname varchar(16) not null,
+  teacher_id int not null
+);
+
+create table score(
+  sid int not null auto_increment primary key,
+  student_id int not null,
+  corse_id int not null,
+  number int not null
+);
+
+INSERT INTO class(`cid`, `caption`) VALUES (1, '三年二班');
+INSERT INTO class(`cid`, `caption`) VALUES (2, '一年三班');
+INSERT INTO class(`cid`, `caption`) VALUES (3, '三年一班');
+
+INSERT INTO course(`cid`, `cname`, `teacher_id`) VALUES (1, '生物', 1);
+INSERT INTO course(`cid`, `cname`, `teacher_id`) VALUES (2, '体育', 1);
+INSERT INTO course(`cid`, `cname`, `teacher_id`) VALUES (3, '物理', 2);
+
+INSERT INTO score(`sid`, `student_id`, `corse_id`, `number`) VALUES (1, 1, 1, 60);
+INSERT INTO score(`sid`, `student_id`, `corse_id`, `number`) VALUES (2, 1, 2, 59);
+INSERT INTO score(`sid`, `student_id`, `corse_id`, `number`) VALUES (3, 2, 2, 100);
+
+INSERT INTO student(`sid`, `sname`, `gender`, `class_id`) VALUES (1, '钢弹', '女', 1);
+INSERT INTO student(`sid`, `sname`, `gender`, `class_id`) VALUES (2, '铁锤', '女', 1);
+INSERT INTO student(`sid`, `sname`, `gender`, `class_id`) VALUES (3, '山炮', '男', 2);
+
+INSERT INTO teacher(`tid`, `tname`) VALUES (1, '路飞');
+INSERT INTO teacher(`tid`, `tname`) VALUES (2, '索隆');
+INSERT INTO teacher(`tid`, `tname`) VALUES (3, '香吉');
+
+
+
+
