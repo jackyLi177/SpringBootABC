@@ -10,8 +10,8 @@ import java.io.Serializable;
  * 
  * </p>
  *
- * @author admin
- * @since 2019-01-04
+ * @author liyongjie
+ * @since 2019-01-29
  */
 public class User extends Model<User> {
 
@@ -76,7 +76,7 @@ public class User extends Model<User> {
     @Override
     public String toString() {
         return "User{" +
-        "id=" + id +
+        ", id=" + id +
         ", name=" + name +
         ", age=" + age +
         ", email=" + email +

@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
  *  服务实现类
  * </p>
  *
- * @author admin
- * @since 2019-01-04
+ * @author liyongjie
+ * @since 2019-01-29
  */
 @Service
 public class HomeServiceImpl extends ServiceImpl<HomeMapper, Home> implements HomeService {

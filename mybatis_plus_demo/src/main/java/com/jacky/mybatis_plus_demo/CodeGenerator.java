@@ -21,7 +21,7 @@ public class CodeGenerator {
         // 1. 全局配置
         GlobalConfig config = new GlobalConfig();
         config.setActiveRecord(true) // 是否支持AR模式
-                .setAuthor("admin") // 作者
+                .setAuthor("liyongjie") // 作者
                 .setOutputDir("D:\\WorkSpace\\SpringBootABC\\mybatis_plus_demo\\src\\main\\java") // 生成路径
                 .setFileOverride(true) // 文件覆盖
                 .setIdType(IdType.AUTO) // 主键策略
@@ -42,6 +42,7 @@ public class CodeGenerator {
         stConfig.setCapitalMode(true)// 全局大写命名
                 .setDbColumnUnderline(true)// 指定表名，字段名是否使用下划线
                 .setNaming(NamingStrategy.underline_to_camel)// 数据库表映射到实体的命名策略
+                .setInclude(new String[]{"home","user"})
 //                .setTablePrefix("tbl_")// 设置表的前缀
 //                .setInclude("book_info"); // 生成的表
         ;

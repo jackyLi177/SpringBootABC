@@ -12,26 +12,19 @@ import java.io.Serializable;
  * 
  * </p>
  *
- * @author admin
- * @since 2019-01-04
+ * @author liyongjie
+ * @since 2019-01-29
  */
 public class Home extends Model<Home> {
 
     private static final long serialVersionUID = 1L;
 
-    private String name;
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
+    private String name;
     private String addr;
+    private Integer deleted;
 
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public Integer getId() {
         return id;
@@ -39,6 +32,14 @@ public class Home extends Model<Home> {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAddr() {
@@ -49,6 +50,14 @@ public class Home extends Model<Home> {
         this.addr = addr;
     }
 
+    public Integer getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Integer deleted) {
+        this.deleted = deleted;
+    }
+
     @Override
     protected Serializable pkVal() {
         return this.id;
@@ -57,9 +66,10 @@ public class Home extends Model<Home> {
     @Override
     public String toString() {
         return "Home{" +
-        ", name=" + name +
         ", id=" + id +
+        ", name=" + name +
         ", addr=" + addr +
+        ", deleted=" + deleted +
         "}";
     }
 }
