@@ -3,6 +3,8 @@ package com.jacky.mybatis_plus_demo.entity;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.baomidou.mybatisplus.activerecord.Model;
+import org.apache.shiro.crypto.hash.SimpleHash;
+
 import java.io.Serializable;
 
 /**
@@ -34,6 +36,8 @@ public class User extends Model<User> {
      * 邮箱
      */
     private String email;
+    private String password;
+    private Integer deleted;
 
 
     public Long getId() {
@@ -68,6 +72,22 @@ public class User extends Model<User> {
         this.email = email;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Integer getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Integer deleted) {
+        this.deleted = deleted;
+    }
+
     @Override
     protected Serializable pkVal() {
         return this.id;
@@ -80,6 +100,13 @@ public class User extends Model<User> {
         ", name=" + name +
         ", age=" + age +
         ", email=" + email +
+        ", password=" + password +
+        ", deleted=" + deleted +
         "}";
+    }
+
+    public static void main(String[] args){
+        SimpleHash hash = new SimpleHash("md5","123456","Jone",1);
+        System.out.println(hash.toString());
     }
 }

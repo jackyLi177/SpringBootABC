@@ -6,6 +6,8 @@ import com.jacky.mybatis_plus_demo.service.HomeService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import java.io.Serializable;
+
 /**
  * <p>
  *  服务实现类

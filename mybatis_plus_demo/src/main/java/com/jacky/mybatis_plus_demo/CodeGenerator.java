@@ -42,7 +42,7 @@ public class CodeGenerator {
         stConfig.setCapitalMode(true)// 全局大写命名
                 .setDbColumnUnderline(true)// 指定表名，字段名是否使用下划线
                 .setNaming(NamingStrategy.underline_to_camel)// 数据库表映射到实体的命名策略
-                .setInclude(new String[]{"home","user"})
+                .setInclude(new String[]{"user"})
 //                .setTablePrefix("tbl_")// 设置表的前缀
 //                .setInclude("book_info"); // 生成的表
         ;

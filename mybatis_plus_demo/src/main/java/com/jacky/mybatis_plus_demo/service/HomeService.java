@@ -2,7 +2,6 @@ package com.jacky.mybatis_plus_demo.service;
 
 import com.jacky.mybatis_plus_demo.entity.Home;
 import com.baomidou.mybatisplus.service.IService;
-import org.springframework.stereotype.Service;
 
 /**
  * <p>

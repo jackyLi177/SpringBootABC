@@ -18,4 +18,10 @@
         id, name, addr, deleted
     </sql>
 
+    <select id="selectById" resultType="com.jacky.mybatis_plus_demo.entity.Home">
+        select
+        <include refid="Base_Column_List"/>
+        from home
+    </select>
+
 </mapper>
