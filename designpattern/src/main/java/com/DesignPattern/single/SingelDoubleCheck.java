@@ -6,7 +6,7 @@ public class SingelDoubleCheck {
 
     private SingelDoubleCheck(){}
 
-    public static SingelDoubleCheck main(String[ ] args){
+    public static SingelDoubleCheck getInstance(){
         if (instance == null){
             synchronized(SingelDoubleCheck.class){
                 if (instance == null){
