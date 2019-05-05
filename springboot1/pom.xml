@@ -195,7 +195,7 @@
         </plugins>
         <resources>
             <resource>
-                <!-- 将lib文件夹下的jar结尾文件打包到BOOT-INF/lib/目录 -->
+                <!-- 将lib文件夹下的jar结尾文件打包到BOOT-INF/libs/目录 -->
                 <directory>lib</directory>
                 <targetPath>BOOT-INF/lib/</targetPath>
                 <includes>
