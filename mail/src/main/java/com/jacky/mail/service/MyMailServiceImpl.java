@@ -16,7 +16,7 @@ import java.io.File;
 
 /**
  * 简单邮件发送，不包括 【模板邮件】
- * @Author : liyongjie
+ * @Author : lyj
  * @Date : 2018/8/17 0017
  */
 @Service

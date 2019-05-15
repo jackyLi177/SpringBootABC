@@ -10,7 +10,7 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 
 /**
- * @author Ian
+ * @author lyj
  * @date 2018/3/28 0830 封装各种格式的编码解码工具类. 1.Commons-Codec的 hex/base64 编码 2.自制的base62 编码
  *     3.Commons-Lang的xml/html escape 4.JDK提供的URLEncoder
  */

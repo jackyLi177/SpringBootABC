@@ -1,19 +1,16 @@
-package com.test;
+package com.test.pinyin;
 
 
-import java.lang.reflect.ParameterizedType;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.regex.Pattern;
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
+import java.util.Arrays;
+
 /**
- * @Author : liyongjie
+ * @Author : lyj
  * @Date : 2018/7/13 0013
  */
 public class Demo {

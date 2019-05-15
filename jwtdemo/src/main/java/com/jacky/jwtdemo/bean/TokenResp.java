@@ -2,7 +2,7 @@ package com.jacky.jwtdemo.bean;
 
 /**
  * 请求token时的返回体
- * @Author : liyongjie
+ * @Author : lyj
  * @Date : 2018/8/21 0021
  */
 public class TokenResp {

@@ -11,11 +11,11 @@ import java.util.concurrent.Executor;
 
 
 /**
- * @Author : liyongjie
+ * @Author : lyj
  * @Date : 2018/8/2 0002
  */
 @Configuration
-@ComponentScan("com.SpringBootEvent")
+@ComponentScan("com.test.SpringBootEvent")
 @EnableAsync
 public class TaskExecutorConfig implements AsyncConfigurer {
     @Override

@@ -1,11 +1,10 @@
 package com.test.SpringBootEvent.TaskExecutor;
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.VoidType;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 /**
- * @Author : liyongjie
+ * @Author : lyj
  * @Date : 2018/8/2 0002
  */
 @Service

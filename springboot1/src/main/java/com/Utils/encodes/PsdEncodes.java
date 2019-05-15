@@ -1,7 +1,7 @@
 package com.Utils.encodes;
 
 /**
- * @author Ian
+ * @author lyj
  * @date 2018/3/28 0830
  */
 public class PsdEncodes {

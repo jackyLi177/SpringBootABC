@@ -9,7 +9,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- * @Author : liyongjie
+ * @Author : lyj
  * @Date : 2018/7/4 0004
  */
 public class c3p0Utils {

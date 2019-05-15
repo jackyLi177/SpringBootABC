@@ -1,7 +1,7 @@
 package com.exception;
 
 /**
- * @author Ian
+ * @author lyj
  * @date 18-5-9上午11:48
  */
 public enum WebError {
