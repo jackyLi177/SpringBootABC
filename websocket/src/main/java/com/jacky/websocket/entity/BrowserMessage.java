@@ -2,6 +2,7 @@ package com.jacky.websocket.entity;
 
 /**
  * 浏览器向服务器发送的信息
+ *
  * @Author : liyongjie
  * @Date : 2018/9/21 0021
  */

@@ -3,6 +3,8 @@ package com.test.SpringBootEvent;
 import com.test.SpringBootEvent.TaskExecutor.TaskExecutorService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.*;
+
 /**
  * @Author : liyongjie
  * @Date : 2018/8/2 0002
@@ -10,6 +12,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class DemoMain {
 
     public static void main(String[] args){
+        int[] a = {1,2,3,4,4,4};
+        Set<Integer> set =new HashSet<>();
 
         //
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);

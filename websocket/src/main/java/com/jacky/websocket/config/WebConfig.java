@@ -22,33 +22,18 @@ public class WebConfig implements WebMvcConfigurer {
      * 等于在application.properties里配置
      * spring.mvc.view.prefix=/WEB-INF/jsp/
      * spring.mvc.view.suffix=.jsp
+     *
      * @param registry
      */
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
-        registry.jsp("webapp/WEB-INF/jsp/",".jsp");
+        registry.jsp("webapp/WEB-INF/jsp/", ".jsp");
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     /**
      * 跨域
+     *
      * @param registry
      */
     @Override
