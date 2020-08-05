@@ -13,13 +13,6 @@ import java.util.UUID;
 /**
  * 消息队列业务逻辑实现
  * ========================
- *
- * @author 恒宇少年
- * Created with IntelliJ IDEA.
- * Date：2017/11/26
- * Time：14:52
- * 码云：http://git.oschina.net/jnyqy
- * ========================
  */
 @Component
 public class QueueMessageServiceSupport
@@ -36,7 +29,7 @@ public class QueueMessageServiceSupport
         //设置回调为当前类对象
         rabbitTemplate.setConfirmCallback(this);
         //构建回调id为uuid
-        CorrelationData correlationId = new CorrelationData(UUID.randomUUID().toString());
+        CorrelationData correlationId = new CorrelationData(message.toString());
         //发送消息到消息队列
         rabbitTemplate.convertAndSend(exchangeEnum.getValue(),queueEnum.getRoutingKey(),message,correlationId);
     }

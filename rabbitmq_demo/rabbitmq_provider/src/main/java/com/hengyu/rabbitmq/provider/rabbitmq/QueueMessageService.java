@@ -10,13 +10,6 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
  * 当一个消息被成功写入到RabbitMQ服务端时，
  * 就会自动的回调RabbitTemplate.ConfirmCallback接口内的confirm方法完成通知
  * ========================
- *
- * @author 恒宇少年
- * Created with IntelliJ IDEA.
- * Date：2017/11/26
- * Time：14:50
- * 码云：http://git.oschina.net/jnyqy
- * ========================
  */
 public interface QueueMessageService
     extends RabbitTemplate.ConfirmCallback

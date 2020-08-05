@@ -9,13 +9,6 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * 消息队列消息消费者入口
  * ========================
- *
- * @author 恒宇少年
- * Created with IntelliJ IDEA.
- * Date：2017/11/26
- * Time：15:15
- * 码云：http://git.oschina.net/jnyqy
- * ========================
  */
 @SpringBootApplication
 @ComponentScan(value = "com.hengyu.rabbitmq")

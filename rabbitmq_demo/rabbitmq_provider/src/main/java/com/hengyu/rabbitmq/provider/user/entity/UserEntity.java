@@ -9,13 +9,6 @@ import java.math.BigDecimal;
 /**
  * 用户实体
  * ========================
- *
- * @author 恒宇少年
- * Created with IntelliJ IDEA.
- * Date：2017/11/26
- * Time：14:31
- * 码云：http://git.oschina.net/jnyqy
- * ========================
  */
 @Data
 @Table(name = "user_info")
@@ -27,7 +20,7 @@ public class UserEntity
      * 用户编号
      */
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "UI_ID")
     private Long id;
     /**
@@ -50,4 +43,11 @@ public class UserEntity
      */
     @Column(name = "UI_BALANCE")
     private BigDecimal balance;
+
+    public UserEntity(String userName, String name, int age, BigDecimal balance) {
+        this.userName = userName;
+        this.name = name;
+        this.age = age;
+        this.balance = balance;
+    }
 }

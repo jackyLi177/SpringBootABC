@@ -12,20 +12,13 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * 用户业务逻辑实现类
  * ========================
- *
- * @author 恒宇少年
- * Created with IntelliJ IDEA.
- * Date：2017/11/26
- * Time：14:37
- * 码云：http://git.oschina.net/jnyqy
- * ========================
  */
 @Service
 @Transactional(rollbackFor = Exception.class)
-public class UserService
-{
+public class UserService {
     @Autowired
     private UserRepository userRepository;
+
     /**
      * 消息队列业务逻辑实现
      */

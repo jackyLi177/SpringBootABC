@@ -5,13 +5,6 @@ import lombok.Getter;
 /**
  * rabbitmq交换配置枚举
  * ========================
- *
- * @author 恒宇少年
- * Created with IntelliJ IDEA.
- * Date：2017/11/26
- * Time：13:56
- * 码云：http://git.oschina.net/jnyqy
- * ========================
  */
 @Getter
 public enum ExchangeEnum

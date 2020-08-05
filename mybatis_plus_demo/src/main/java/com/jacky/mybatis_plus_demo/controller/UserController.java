@@ -1,17 +1,12 @@
 package com.jacky.mybatis_plus_demo.controller;
 
 
-import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.jacky.mybatis_plus_demo.common.ResponseEntity;
 import com.jacky.mybatis_plus_demo.common.SuperController;
-import com.jacky.mybatis_plus_demo.entity.User;
 import com.jacky.mybatis_plus_demo.service.impl.UserServiceImpl;
-import org.apache.shiro.crypto.hash.SimpleHash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 

@@ -5,13 +5,6 @@ import lombok.Getter;
 /**
  * 队列配置枚举
  * ========================
- *
- * @author 恒宇少年
- * Created with IntelliJ IDEA.
- * Date：2017/11/26
- * Time：14:05
- * 码云：http://git.oschina.net/jnyqy
- * ========================
  */
 @Getter
 public enum QueueEnum

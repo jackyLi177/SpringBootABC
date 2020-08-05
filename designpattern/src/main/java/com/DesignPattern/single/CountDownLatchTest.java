@@ -17,7 +17,7 @@ public class CountDownLatchTest {
                     System.out.println("子线程"+Thread.currentThread().getName()+"执行完毕");
                     latch.countDown();
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    e.printStackTrace() ;
                 }
             };
         }.start();
