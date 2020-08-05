@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
- * @author liyongjie
+ * @author lyj
  * @date 2018年5月17日
  */
 @Configuration

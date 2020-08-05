@@ -1,7 +1,7 @@
 package com.jacky.mail.service;
 
 /**
- * @Author : liyongjie
+ * @Author : lyj
  * @Date : 2018/8/17 0017
  */
 public interface MyMailService {

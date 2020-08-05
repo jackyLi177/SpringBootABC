@@ -15,13 +15,13 @@ public class WebSocketController {
 
     @MessageMapping("/welcome")
     @SendTo("/topic/getResponse")
-    public ServerResponse getResponse(BrowserMessage message){
+    public ServerResponse getResponse(BrowserMessage message) {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return new ServerResponse("欢迎使用WebSocket  "+message.getMsg());
+        return new ServerResponse("欢迎使用WebSocket  " + message.getMsg());
     }
 
 }

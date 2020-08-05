@@ -1,6 +1,5 @@
 package com.test;
 
-import com.model.Learner;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -11,17 +10,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.springframework.transaction.jta.WebSphereUowTransactionManager;
 
 import java.io.*;
-import java.net.*;
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
- * @author liyongjie
+ * @author lyj
  * @date 2018年5月22日
  */
 public class Jil {

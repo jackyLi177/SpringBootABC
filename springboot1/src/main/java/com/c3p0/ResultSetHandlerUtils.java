@@ -22,7 +22,7 @@ import java.util.*;
  *         6、ScalarHandler:对于查询结果，只有一个结果集。用泛型进行封装
  *         7、MapHandler:将结果集第一行数据，放在map中,Map<列名，这列的数据>
  *         8、MapListHandler:将结果集每一行存储到map中 ,再把map集合存储到List集合中
- * @Author : liyongjie
+ * @Author : lyj
  * @Date : 2018/7/6 0006
  */
 public class ResultSetHandlerUtils {

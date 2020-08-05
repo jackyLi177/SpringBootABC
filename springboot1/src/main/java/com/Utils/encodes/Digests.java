@@ -12,7 +12,7 @@ import java.security.MessageDigest;
 import java.security.SecureRandom;
 
 /**
- * @author Ian
+ * @author lyj
  * @date 2018/3/28 0830 支持SHA-1/MD5消息摘要的工具类. 返回ByteSource，可进一步被编码为Hex, Base64或UrlSafeBase64
  */
 public class Digests {

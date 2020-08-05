@@ -1,7 +1,7 @@
 package com.Utils.json;
 
 /**
- * @author Ian
+ * @author lyj`
  * @date 2018/3/30 重写各类Model的toString进行格式化
  */
 public class JsonReadable {

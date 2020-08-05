@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class DemoPublisher {
+
+    //使用ApplicationContext发布事件
     @Autowired
     ApplicationContext applicationContext;
 

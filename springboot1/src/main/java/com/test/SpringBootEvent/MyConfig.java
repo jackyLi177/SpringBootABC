@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * @Date : 2018/8/2 0002
  */
 @Configuration
-@ComponentScan("com.SpringBootEvent")
+@ComponentScan("com.test.SpringBootEvent")
 public class MyConfig {
 
 }

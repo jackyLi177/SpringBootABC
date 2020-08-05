@@ -8,7 +8,7 @@ import org.apache.commons.logging.LogFactory;
 import java.io.IOException;
 
 /**
- * @author Ian
+ * @author lyj
  * @date 2018/3/30 jackson Utils
  */
 public class ObjectMapperUtil {

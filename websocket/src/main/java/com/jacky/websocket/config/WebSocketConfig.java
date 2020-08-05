@@ -16,6 +16,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     /**
      * 实现了registerStompEndpoints方法添加了对应的STOMP使用SockJS协议
+     *
      * @param registry
      */
     @Override

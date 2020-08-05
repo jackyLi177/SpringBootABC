@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 /**
- * @Author : liyongjie
+ * @Author : lyj
  * @Date : 2018/8/21 0021
  */
 public interface TokenDao extends JpaRepository<MyToken,Long> ,JpaSpecificationExecutor<MyToken> {

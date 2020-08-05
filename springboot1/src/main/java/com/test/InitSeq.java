@@ -1,7 +1,7 @@
 package com.test;
 
 /**
- * @Author : liyongjie
+ * @Author : lyj
  * @Date : 2018/12/04
  */
 public class InitSeq {

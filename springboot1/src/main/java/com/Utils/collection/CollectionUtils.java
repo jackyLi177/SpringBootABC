@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author Ian @Description: CollectionUtils
+ * @author lyj @Description: CollectionUtils
  * @date 18-3-31下午3:41
  */
 public class CollectionUtils {

@@ -20,7 +20,7 @@ import java.io.PrintWriter;
 import java.security.SignatureException;
 
 /**
- * @Author : liyongjie
+ * @Author : lyj
  * @Date : 2018/8/21 0021
  */
 public class MyJWTInterceptor implements HandlerInterceptor {

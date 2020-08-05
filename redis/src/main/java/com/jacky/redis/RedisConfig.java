@@ -11,7 +11,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 
 /**
- * @Author : liyongjie
+ * @Author : lyj
  * @Date : 2018/8/21 0021
  */
 @Configuration

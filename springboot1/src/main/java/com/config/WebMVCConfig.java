@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * 设置自定义过滤器
  * @author liyongjie
  * @date 2018年5月18日
  */
